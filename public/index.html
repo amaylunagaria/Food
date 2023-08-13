@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tail Wind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-gray-600 font-body">
+
+    <div class="grid grid-cols-1 md:grid-cols-3">
+        <!-- Navbar Start -->
+        <div class="md:flex md:justify-end md:col-span-1">
+            <nav class="text-right">
+                <div class="flex items-center justify-between">
+                    <h1 class="p-4 font-bold uppercase border-b border-gray-100">
+                        <a href="/" class="hover:text-gray-700">Food</a>
+                    </h1>
+                    <div class="px-4 cursor-pointer md:hidden" id="listMenu">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <ul class="hidden mt-6 text-sm md:block" id="menu">
+                    <li class="py-1 font-bold text-gray-700">
+                        <a href="#" class="flex justify-end px-4 border-r-4 border-red-500">
+                            <span>Home</span>
+                            <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="flex justify-end px-4 border-r-4 border-white">
+                            <span>About</span>
+                            <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="flex justify-end px-4 border-r-4 border-white">
+                            <span>Contact</span>
+                            <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- Navbar End -->
+
+
+
+        <main class="px-16 py-6 bg-gray-100 md:col-span-2">
+
+            <div class="flex justify-center md:justify-end">
+                <a href="#"
+                    class="transition duration-500 ease-out md:border-2 border-amber-500 text-amber-600 btn hover:bg-amber-500 hover:text-white">Log
+                    in</a>
+                <a href="#"
+                    class="ml-2 transition duration-500 ease-out md:border-2 border-amber-500 text-amber-600 btn hover:bg-amber-500 hover:text-white">Sign
+                    up</a>
+            </div>
+
+            <header>
+                <h2 class="py-3 text-6xl font-semibold text-gray-700">Recipes</h2>
+                <h3 class="text-2xl font-semibold">For All</h3>
+            </header>
+
+            <div>
+                <h4 class="pb-2 mt-12 font-bold border-b border-gray-200">Latest Recipes</h4>
+
+                <div class="grid grid-cols-1 gap-10 mt-8 lg:grid-cols-3 md:grid-cols-2">
+                    <!-- cards go here -->
+                    <div class="card">
+                        <img src="images/stew.jpg" alt="" class="card-img">
+                        <div class="m-4">
+                            <span class="font-bold">5 Bean Chilli Stew</span>
+                            <span class="block text-sm text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/noodles.jpg" alt="" class="card-img">
+                        <div class="m-4">
+                            <span class="font-bold">Veg. Noodles</span>
+                            <span class="block text-sm text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/curry.jpg" alt="" class="card-img">
+                        <div class="m-4">
+                            <span class="font-bold">Tofu Curry</span>
+                            <span class="block text-sm text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>50 mins</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="pb-2 mt-12 font-bold border-b border-gray-200">Most Popular Recipes</h4>
+
+                <div class="mt-8">
+                    <!-- Cards go here -->
+                </div>
+
+                <div class="flex justify-center">
+                    <div
+                        class="transition duration-300 ease-out transform bg-gray-300 btn text-zinc-600 hover:shadow-inner hover:scale-110 hover:bg-opacity-50">
+                        Load More</div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
